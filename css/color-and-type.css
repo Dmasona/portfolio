@@ -1,3 +1,31 @@
-#pp1{
-    align-items: center;
+h3{
+    font-family: Arial, sans-serif;
+    font-size:20px;
+    font-weight:bold;
+    text-align: left;
+}
+main{
+    font-family: Arial, sans-serif;
+}
+d1{
+    font-family: Arial, sans-serif;
+    font-size:18px;
+    font-weight:normal;
+    font-style: normal;
+ line-height: 1.5;
+}
+dd{
+    font-family: Arial, sans-serif;
+    font-size:16px;
+    font-weight:bold;
+    font-style: italic;
+     line-height: 2;
+}
+img{
+    height:auto;
+    max-width: 50%;
+   
+}
+main{
+    font-family: Arial, sans-serif;
 }
