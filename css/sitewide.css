@@ -10,7 +10,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex! important;          /* Makes items horizontal */
+    display: flex;        /* Makes items horizontal */
     justify-content: center;
     flex-wrap: wrap;        /* Allows wrapping on smaller screens */
 }
@@ -30,6 +30,45 @@
 .navbar a:hover {
     background-color: #dddddd;
 }
+
+/* Required for dropdown positioning */
+.dropdown {
+    position: relative;
+}
+
+/* Hidden dropdown menu */
+.navbar .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: lavender;
+    min-width: 200px;
+    padding: 0;
+    flex-direction: column;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Make dropdown items stack vertically */
+.dropdown-menu li {
+    width: 100%;
+}
+
+/* Dropdown links styling */
+.dropdown-menu a {
+    padding: 12px 16px;
+    white-space: nowrap;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+
+
 body {
     margin: 0;
     padding: 0;
