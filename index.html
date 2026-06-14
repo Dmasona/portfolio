@@ -25,6 +25,20 @@
 
         <li><a href="colortheoryoverview/colortheoryoverview.html">Color Theory Overview</a></li>
         <li><a href="typographyoverview/typographyoverview.html">Typography Overview</a></li>
+        <li class="dropdown">
+    <a href="#">Theme</a>
+    <ul class="dropdown-menu">
+        <li><strong>Mode</strong></li>
+        <li><a href="#" onclick="setTheme('light')">Light</a></li>
+        <li><a href="#" onclick="setTheme('dark')">Dark</a></li>
+
+        <li><strong>Font Size</strong></li>
+        <li><a href="#" onclick="setFontSize('small')">Small</a></li>
+        <li><a href="#" onclick="setFontSize('medium')">Medium</a></li>
+        <li><a href="#" onclick="setFontSize('large')">Large</a></li>
+    </ul>
+</li>
+        
     </ul>
 </nav>
 <h1>My Portfolio</h1>
@@ -38,5 +52,34 @@
 
 </main>
 
-</body>
+<script>
+function setTheme(mode) {
+    document.body.classList.remove('light-mode', 'dark-mode');
+
+    if (mode === 'dark') {
+        document.body.classList.add('dark-mode');
+    } else {
+        document.body.classList.add('light-mode');
+    }
+}
+
+function setFontSize(size) {
+    document.body.classList.remove(
+        'font-small',
+        'font-medium',
+        'font-large'
+    );
+
+    if (size === 'small') {
+        document.body.classList.add('font-small');
+    } else if (size === 'large') {
+        document.body.classList.add('font-large');
+    } else {
+        document.body.classList.add('font-medium');
+    }
+}
+
+/* Default settings */
+document.body.classList.add('light-mode', 'font-medium');
+</script></body>
 </html> 
